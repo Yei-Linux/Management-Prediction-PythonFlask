@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <!--<link rel="stylesheet" href="{{url_for('static',filename='estilos.css') }}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css') }}">-->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/estilos2.css') }}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css') }}">
+    <title>Document</title>
+    <style>
+		.container-fluid{
+			padding-top: 5%;
+		}
+	</style>
+
+</head>
+<body>
+
+    <nav class="row menu effect-2">
+                    <div class="col">
+                        <ul>
+                            <li>
+                                <a href="{{url_for('upload_0')}}">
+                                    <span data-hover="Inicio">Inicio</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{url_for('upload4')}}">
+                                    <span data-hover="Ver rectores">Ver rectores</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{url_for('upload3')}}">
+                                    <span data-hover="Ver candidatos">Ver candidatos</span>
+                                </a>
+                            </li>
+                            <li>
+                                 <a href="{{url_for('upload2')}}">
+                                    <span data-hover="Ver estadísticas">Ver estadísticas</span>
+                                 </a>
+                            </li>
+                            <li>
+                                 <a href="{{url_for('upload0')}}">
+                                    <span data-hover="Emular Gestion">Emular Gestion</span>
+                                 </a>
+                            </li>
+                        </ul>
+                    </div>
+     </nav> 
+     
+    <div class="container-fluid">
+
+        <div class="container cont1 col-md-9">
+
+            <div class="text-center d-inline col-md-4">
+              <h1 class="display-4">Proyecto Final</h1>
+              <h2 class="display-4">Sistemas de Información</h2>
+              <p class="lead display-6">El presente proyecto consiste en poder simular la Gestion de los distintos candidatos al
+                  rectorado y poder ayudar a los estudiantes a poder tomar una mejor eleccion.</p>
+              <hr class="my-4">
+            </div>
+        </div>
+
+        <div>
+
+        </div>
+    </div>
+    
+    <main class="servicios p-y-1">
+        <div class="container col-md-9 ">
+            <h2 class="text-xs-center tirtulop display-4">Propositos del Sistema</h2>
+
+
+            <div class="row ">
+                <article class="col-md-4 wow bounceInLeft subtitulop">
+                    <h3 class="display-4">Ventaja 1</h3>
+                    <p class="hidden-sm-down">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem incidunt similique saepe neque possimus ex ipsam.</p>
+
+                </article>
+
+                <article class="col-md-4 wow bounceInUp">
+                    <h3 class="display-4">Ventaja 2</h3>
+                    <p class="hidden-sm-down">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem incidunt similique saepe neque possimus ex ipsam.</p>
+                    
+                </article>
+
+                <article class="col-md-4 wow bounceInRight">
+                    <h3 class="display-4">Ventaja 3</h3>
+                    <p class="hidden-sm-down">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem incidunt similique saepe neque possimus ex ipsam.</p>
+                </article>
+
+            </div>
+        </div>
+    </main>
+    
+    <main class="estadistica p-y-1 ">
+        <div class="container  ">
+            <h2 class="text-center tirtulop display-4">Estadisticas</h2>
+
+
+            <div class="row">
+                <article class="col-md-6 wow subtituloestadistica">
+                    <h3 class="display-4">Funcionalidad de las Estadisticas</h3>
+                    <p class="hidden-sm-down">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem incidunt similique saepe neque possimus ex ipsam.</p>
+
+                </article>
+
+                <article class="col-md-6 wow imgest">
+                    <img src="{{url_for('static',filename='images/estadistica.png') }}" alt="">
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <main class="integrantes p-y-1 ">
+        <div class="container  ">
+            <h2 class="text-center tirtulop display-4">Integrantes del Proyecto de S.I.</h2>
+
+
+            <div class="row dint">
+               <article class="col-md-6 wow imgint">
+                    <img src="{{url_for('static',filename='images/560277.png') }}" alt="">
+                </article>
+               
+                <article class="col-md-6 wow subtituloestadistica">
+                    <h3 class="display-4">Team</h3>
+                    <p class="hidden-sm-down pint">Alvan Huarcaya Cesar Jesus</p>
+                    <p class="hidden-sm-down pint">Calderon Marano Jahn hristian</p>
+                    <p class="hidden-sm-down pint">Chávez Palomino Alfredo Manuel</p>
+                    <p class="hidden-sm-down pint">Nancay Ramos Danny</p>
+                </article>
+
+            </div>          
+            
+        </div>
+    </main>
+
+     <main class="integrantes p-y-1 ">
+        <div class="container  ">
+            <h2 class="text-center tirtulop display-4">Docente</h2>
+
+
+            <div class="row dint">
+               <article class="col-md-6 wow imgint">
+                    <img src="{{url_for('static',filename='images/docente.png') }}" alt="">
+                </article>
+               
+                <article class="col-md-6 wow subtituloestadistica">
+                    <h3 class="display-4">Mg. Oswaldo Casasola</h3>
+                </article>
+
+            </div>          
+            
+        </div>
+    </main>
+    
+    <footer>
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <p> Universidad Nacional del Callao</p>
+    </div>
+    </footer>
+</body>
+</html>

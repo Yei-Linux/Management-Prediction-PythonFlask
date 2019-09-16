@@ -1,0 +1,322 @@
+*{
+    text-align: center;
+    color: #fff;
+    
+}
+body{
+    background: #161616;
+    color: #f2f2f2;
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  
+}
+
+/*---MENU---*/
+
+.menu{
+  
+    background: #161616;
+    padding: 4px;
+    padding-top:15px;
+}
+
+.menu ul{
+    list-style: none; 
+    text-align: center;
+}
+
+.menu ul li{
+    display: inline-block;
+    font-style: none;
+}
+
+.menu ul li a{
+    color: #d42244;
+    font-size: 12px;
+    border-bottom: 0px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.menu li + li:before{
+    content: " | ";
+    padding: 0 10px;
+    color: #d42244;
+}
+
+.header-container .title{
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    width: 70%;
+}
+
+.title h1{
+    margin: 10px;
+    
+}
+
+.title p{
+    
+    padding: auto 40px;
+}
+
+.title .btn{
+    background: #2772d6;
+    color: #fff;
+    border: none;
+}
+
+.title .btn:hover{
+    background: #d42244;
+}
+
+.effect-2 a span{
+	position: relative
+}
+
+.effect-2 a span{
+	display: inline-block
+}
+
+.effect-2 a {
+	line-height: 24px;
+	perspective: 1000px
+}
+
+.effect-2 a span {
+	padding: 0 14px;
+	transition: transform .5s;
+	transform-origin: 50% 0;
+	transform-style: preserve-3d
+}
+
+.effect-2 a span::before {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #d42244;
+	content: attr(data-hover);
+	transition: background 1s;
+	transform: rotateX(-90deg);
+	transform-origin: 50% 0
+}
+
+.effect-2 a:focus span, .effect-2 a:hover span {
+	transform: rotateX(90deg) translateY(-22px)
+}
+
+.effect-2 a:focus span::before, .effect-2 a:hover span::before {
+    background: #d42244;
+    color:#fff;
+}
+
+
+
+.contenedor-formulario{
+    width: 95%;
+    padding: 4px;
+    margin: auto;    
+    border: 4px solid #424242;
+}
+
+form{
+    display: flex;
+    width: 100%;  
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+
+    
+}
+
+.contenedorPregunta{
+   display: flex;
+    border: 6px solid #424242;
+    width: 40%;
+    flex-wrap: wrap;
+    margin: 20px 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.contenedorPregunta label{
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin-left: 20px;
+    
+}
+
+.contenedorPregunta .contenedorInput{
+    margin-top: 10px;
+       display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.input{
+    margin: 20px 10px;
+}
+
+
+
+.contenedor-nombre{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px auto;
+    
+}
+
+.contenedor-nombre label{
+    margin: auto auto 10px auto;
+    font-size: 16px;
+   
+
+}
+
+.contenedor-nombre input{
+    width: 50%;
+    margin: auto;
+    color: #fff;
+    background: #424242;
+    border: 2px solid #9a9a9a;
+    padding: 4px 8px;
+}
+
+.contenedor-nombre input:hover{
+   
+    border: 2px solid #fff;
+    
+}
+
+.btn{
+    display: block;
+    margin: 60px auto 60px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: #3f4a4e;
+    text-align: center;
+    border: 2px solid #9a9a9a;
+}
+
+.btn:hover{
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+.container-fluid{
+    background-color: #161616;
+    padding-left: -80px;
+}
+
+.container{
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+.cont1{
+  padding: 3px 10px;
+  border: antiquewhite 2px solid;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.container-fluid{
+    background-color: #161616;
+    padding-bottom:  20px;
+}
+
+.servicios{
+   background-color: #161616;  
+}
+
+.tirtulop{
+    padding-bottom: 20px;
+}
+
+.servicios .container h2{
+    font-size: 2.5em;
+}
+
+.subttulop h3{
+    background: #d42244;
+}
+
+.row article h3{
+     font-size: 1.5em;
+     color: #d42244;
+}
+
+.estadistica{
+   background-color: #161616;  
+}
+
+.estadistica .container h2{
+    font-size: 2.5em;
+}
+
+.imgest img{
+    width: 400px;
+}
+
+article.subtituloestadistica{
+    padding-top: 45px;
+    padding-left: 9%;
+    padding-right: 9%;
+}
+
+.estadistica .container{
+    margin-right: 5%;
+    margin-left:  5%;
+    
+}
+
+
+.integrantes{
+   background-color: #161616;  
+}
+
+.integrantes .container h2{
+    font-size: 2.5em;
+}
+
+.imgint img{
+    width: 220px;
+}
+
+.integrantes .container{
+    margin-right: 10%;
+    margin-left:  10%;
+    
+}
+
+.dint{
+    padding: 0 60px 0 60px;
+}
+.pint{
+margin-bottom: 9px;
+}
+
+footer{
+    background-color: darkslategrey;
+}
+
+footer p{
+    margin: 0px;
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static',filename='estilos.css') }}">
+    <title>Document</title>
+    <style>
+		#homero2{
+			visibility: hidden;
+		}
+		.btn11{
+			visibility: hidden;
+		}
+		.tab2{
+			margin:auto;
+			margin-top: 30px;
+			padding: 10px;
+		}
+		#con2{
+			
+			width: 95%;
+			padding-top: 30px;
+			margin-left: 20px;
+		}
+		#con1{
+			margin-left: 41px;
+		}
+		#con3{
+			margin-left: 350px;
+		}
+		.imagen:hover{
+			opacity: 0.9;
+		}
+		
+		
+	</style>
+  
+</head>
+<body>
+                
+   	<nav class="row menu effect-2">
+                    <div class="col">
+                        <ul>
+                            <li>
+                                <a href="{{url_for('upload_0')}}">
+                                    <span data-hover="Inicio">Inicio</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{url_for('upload4')}}">
+                                    <span data-hover="Ver rectores">Ver rectores</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{url_for('upload3')}}">
+                                    <span data-hover="Ver candidatos">Ver candidatos</span>
+                                </a>
+                            </li>
+                            <li>
+                                 <a href="{{url_for('upload2')}}">
+                                    <span data-hover="Ver estadísticas">Ver estadísticas</span>
+                                 </a>
+                            </li>
+                            <li>
+                                 <a href="{{url_for('upload0')}}">
+                                    <span data-hover="Emular Gestion">Emular Gestion</span>
+                                 </a>
+                            </li>
+                        </ul>
+                    </div>
+     </nav> 
+ 
+    <main>
+        <div class="contenedor-formulario">
+            <form action="{{url_for('upload')}}" method="POST">
+             
+              <div class="contenedor-nombre">
+                  <label for="nombre">Nombre</label>
+                      <input type="text" name="nombre">
+              </div>
+
+                <div class="contenedor-nombre">
+                  <label for="universidad">Universidad</label>
+                      <input type="text" name="universidad">
+              </div>
+
+                <div class="contenedor-nombre">
+                  <label for="profesion">Profesión</label>
+                      <input type="text" name="profesion">
+              </div>
+
+              
+              <div class="contenedorPregunta">
+                  <label for="edad">1. Tipo de Universidad:</label><br>
+                  <div class="contenedorInput">
+                      <div class="input"><input type="radio" name="edad" value="publica" checked>Publica</div>
+                       <div class="input"><input type="radio" name="edad" value="privada">Privada</div>
+                  </div>
+              </div>
+             
+                                          
+              <div class="contenedorPregunta">
+                  <label for="antecedentes">2. Antecedentes de corrupción:</label><br>
+                  <div class="contenedorInput">
+                      <div class="input"><input type="radio" name="antecedentes" value="si" checked>Si</div>
+                      <div class="input"><input type="radio" name="antecedentes" value="no">No</div>
+                  </div>
+              </div>
+              
+              <div class="contenedorPregunta">
+                  <label for="educacion">4. ¿Tiene estudios relacionados a la gestion publica?</label><br>
+                  <div class="contenedorInput">
+                      <div class="input"><input type="radio" name="administracion" value="si" checked>Si</div>
+                      <div class="input"><input type="radio" name="administracion" value="no">No</div>
+                  </div>
+              </div>            
+                            
+              <div class="contenedorPregunta">
+                  <label for="produccion">5. Producción Cientifica:</label><br>
+                  <div class="contenedorInput">
+                      <div class="input"><input type="radio" name="produccion" value="si" checked>Si</div>
+                      <div class="input"><input type="radio" name="produccion" value="no">No</div>
+                  </div>
+              </div>
+              
+              <div class="contenedorPregunta">
+                  <label for="proyectos">6. Proyectos de investigación:</label><br>
+                  <div class="contenedorInput">
+                      <div class="input"><input type="radio" name="proyectos" value="si" checked>Si</div>
+                      <div class="input"><input type="radio" name="proyectos" value="no">No</div>
+                  </div>
+              </div>
+              
+              <div class="contenedorPregunta" id="con1">
+                  <label for="experiencia">7. Experiencia administrativa:</label><br>
+                  <div class="contenedorInput">
+                      <div class="input"><input type="radio" name="experiencia" value="1" checked>1-5</div>
+                      <div class="input"><input type="radio" name="experiencia" value="2">6-10</div>
+                      <div class="input"><input type="radio" name="experiencia" value="3">11-15</div>
+                      <div class="input"><input type="radio" name="experiencia" value="4">16 a mas</div>
+                      <div class="input"><input type="radio" name="experiencia" value="5">No </div>
+                  </div>
+              </div>
+              
+              <div class="contenedorPregunta" id="con3">
+                  <label for="experiencia">8. Ex Rector:</label><br>
+                  <div class="contenedorInput">
+                      <div class="input"><input type="radio" name="exrector" value="si" checked>Si</div>
+                      <div class="input"><input type="radio" name="exrector" value="no">No</div>
+                  </div>  
+              </div>
+              <input type="text" id="homero2" name="home">
+              
+              <div class="contenedorPregunta" id="con2">
+              	<label for="experiencia" class="lab">9. Tipo de Personalidad:(Sino sabes que personalidad tienes, entra aqui---><a href="https://www.16personalities.com/es/descripcion-de-los-tipos" target="_blank">Test de Personalidad</a>)</label><br>
+              	<table class="tab2">
+                   		<tr>
+                   			<td><input type="image" src="{{url_for('static',filename='17.png') }}" name="imgs" value="3" onclick="Click_on(this.value)" class="imagen"></td>
+                   			<td><input type="image" src="{{url_for('static',filename='18.png') }}" name="imgs" value="11" onclick="Click_on(this.value)" class="imagen"></td>
+                   			<td><input type="image" src="{{url_for('static',filename='3.png') }}" name="imgs" value="5" onclick="Click_on(this.value)" class="imagen"></td>
+                   			<td><input type="image" src="{{url_for('static',filename='4.png') }}" name="imgs" value="10" onclick="Click_on(this.value)" class="imagen"></td>
+                   		</tr>
+                   		<tr>
+                   			<td><input type="image" src="{{url_for('static',filename='5.png') }}" name="imgs" value="0" onclick="Click_on(this.value)" class="imagen"></td>
+                   			<td><input type="image" src="{{url_for('static',filename='6.png') }}" name="imgs" value="13" onclick="Click_on(this.value)" class="imagen"></td>
+                   			<td><input type="image" src="{{url_for('static',filename='7.png') }}" name="imgs" value="14" onclick="Click_on(this.value)" class="imagen"></td>
+                   			<td><input type="image" src="{{url_for('static',filename='8.png') }}" name="imgs" value="1" onclick="Click_on(this.value)" class="imagen"></td>
+                   		</tr>
+                   		<tr>
+                   			<td><input type="image" src="{{url_for('static',filename='19.png') }}" name="imgs" value="12" onclick="Click_on(this.value)" class="imagen"></td>
+                   			<td><input type="image" src="{{url_for('static',filename='10.png') }}" name="imgs" value="7" onclick="Click_on(this.value)" class="imagen"></td>
+                   			<td><input type="image" src="{{url_for('static',filename='11.png') }}" name="imgs" value="8" onclick="Click_on(this.value)" class="imagen"></td>
+                   			<td><input type="image" src="{{url_for('static',filename='12.png') }}" name="imgs" value="6" onclick="Click_on(this.value)" class="imagen"></td>
+                   		</tr>
+                   		<tr>
+                   			<td><input type="image" src="{{url_for('static',filename='13.png') }}" name="imgs" value="115" onclick="Click_on(this.value)" class="imagen"></td>
+                   			<td><input type="image" src="{{url_for('static',filename='14.png') }}" name="imgs" value="4" onclick="Click_on(this.value)" class="imagen"></td>
+                   			<td><input type="image" src="{{url_for('static',filename='15.png') }}" name="imgs" value="9" onclick="Click_on(this.value)" class="imagen"></td>
+                   			<td><input type="image" src="{{url_for('static',filename='16.png') }}" name="imgs" value="2" onclick="Click_on(this.value)" class="imagen"></td>
+                   		</tr>
+               </table>
+              	
+              </div>
+       
+              <div class="btn11"><input class="btn" type="submit"></div>
+              
+            </form> 
+        </div>
+       
+    </main>
+    
+    <script>
+		
+			function Click_on(valor){	
+
+				document.getElementById("homero2").value=valor;
+
+        	}
+		
+	</script>
+    
+ 
+</body>
+</html>

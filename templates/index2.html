@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{{url_for('static',filename='estilos.css') }}">
+	<title>Document</title>
+	<style>
+		*{
+			
+			box-sizing: border-box;
+		}
+		body{
+			
+		}
+		h1{
+			margin-top: 2%;
+		}
+		#c-slider{
+			margin: auto;
+			margin-top: 2%;
+			height: 500px;
+			position: relative;
+			width: 800px;
+			overflow: hidden;
+			box-shadow: 0 0 0 10px #fff,
+						0 15px 50px;
+		}
+		#slider{
+			
+			display: flex;
+			width: 450%;
+			
+		}
+		
+		#slider div{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		
+		#btn-prev, #btn-next{
+			width: 40px;
+			height: 40px;
+			background: rgba(255,255,255,0.5);
+			position: absolute;
+			top: 50%;
+			transform: translateY(-100%);
+			line-height: 40´px;
+			font-size: 22px;
+			font-weight: bold;
+			text-align: center;
+			border-radius: 50%;
+			font-family: monospace;
+			cursor: pointer;
+			color: black;
+		}
+		#btn-prev{
+			left: 20px;
+		}
+		#btn-next{
+			right: 20px;
+		}
+		#btn-prev:hover, #btn-next:hover{
+			background: rgba(255,255,255,1);
+		}
+	</style>
+</head>
+<body>
+		<nav class="row menu effect-2">
+                    <div class="col">
+                        <ul>
+                            <li>
+                                <a href="{{url_for('upload_0')}}">
+                                    <span data-hover="Inicio">Inicio</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{url_for('upload4')}}">
+                                    <span data-hover="Ver rectores">Ver rectores</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{url_for('upload3')}}">
+                                    <span data-hover="Ver candidatos">Ver candidatos</span>
+                                </a>
+                            </li>
+                            <li>
+                                 <a href="{{url_for('upload2')}}">
+                                    <span data-hover="Ver estadísticas">Ver estadísticas</span>
+                                 </a>
+                            </li>
+                            <li>
+                                 <a href="{{url_for('upload0')}}">
+                                    <span data-hover="Emular Gestion">Emular Gestion</span>
+                                 </a>
+                            </li>
+                        </ul>
+                    </div>
+     </nav> 
+     
+     <h1>ESTADISTICAS DE EX-RECTORES EN EL PERU</h1>
+     
+     <div id="c-slider">
+     	<div id="slider">
+     	
+     		<div id={{chartID|safe}} class="chart" style="height: 500px; width: 800px"></div>
+			
+			<div id={{chart2ID|safe}} class="chart2" style="height: 500px; width: 800px"></div>
+			
+			<div id={{chart3ID|safe}} class="chart3" style="height: 500px; width: 800px"></div>
+     		
+     	</div>
+     	<div id="btn-prev">&#60;</div>
+     	<div id="btn-next">&#62;</div>
+     </div>
+     
+	<script>
+		var chart_id = {{chartID|safe}}
+		var series = {{ series|safe }}
+		var title = {{ graphtitle|safe }}
+		var xAxis = {{ xAxis|safe }}
+		var yAxis = {{ yAxis|safe }}
+		var chart = {{ chart|safe }}
+		
+		var chart_id2 = {{chart2ID|safe}}
+		var series2 = {{ series2|safe }}
+		var title2 = {{ title2|safe }}
+		var xAxis2 = {{ xAxis2|safe }}
+		var yAxis2 = {{ yAxis2|safe }}
+		var chart2 = {{ chart2|safe }}
+		
+		var chart_id3 = {{chart3ID|safe}}
+		var series3 = {{ series3|safe }}
+		var title3 = {{ graphtitle3|safe }}
+		var xAxis3 = {{ xAxis3|safe }}
+		var yAxis3 = {{ yAxis3|safe }}
+		var chart3 = {{ chart3|safe }}
+		
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			$(chart_id).highcharts({
+				chart: chart,
+				title: title,
+				xAxis: xAxis,
+				yAxis: yAxis,
+				series: series
+			});
+			
+			$(chart_id2).highcharts({
+				chart: chart2,
+				title: title2,
+				xAxis: xAxis2,
+				yAxis: yAxis2,
+				series: series2
+			});
+			
+			$(chart_id3).highcharts({
+				chart: chart3,
+				title: title3,
+				xAxis: xAxis3,
+				yAxis: yAxis3,
+				series: series3
+			});
+			
+			var slider=$('#slider');
+			var siguiente=$('#btn-next');
+			var anterior=$('#btn-prev');
+			
+			$(chart_id3).insertBefore(chart_id);
+			
+			slider.css('margin-left','-'+100+'%');
+			
+			function moverD(){
+				slider.animate({marginLeft:'-'+200+'%'},700,function(){
+					
+					$('#slider>div:first').insertAfter('#slider>div:last');
+				
+					slider.css('margin-left','-'+100+'%');
+
+				});
+			}
+			
+			function moverI(){
+				slider.animate({marginLeft:0},700,function(){
+					
+					$('#slider>div:last').insertBefore('#slider>div:first');
+				
+					slider.css('margin-left','-'+100+'%');
+
+				});
+			}
+			
+			siguiente.on('click',function(){
+				moverD();
+			});
+			
+			anterior.on('click',function(){
+				moverI();
+			});
+			
+			function autoplay(){
+				interval=setInterval(function(){
+					moverD();
+				},5000);
+			}
+			
+			autoplay();
+			
+		});	
+	</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{{url_for('static',filename='estilos.css') }}">
+	<title>Document</title>
+	<style>
+	
+		body{
+		
+		}
+			.tabla {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			margin: 3% auto;
+			width: 85%;
+			background:#ddd;
+			color: #ddd;
+		}
+
+		.tabla td, .tabla th {
+			border: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		.tabla tr:nth-child(even){background-color: white;}
+
+		.tabla tr:hover {background-color: #ddd;}
+
+		.tabla th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: gray;
+			color: white;
+		}
+		.tabla td{
+			color: black;
+		}
+		a{
+			color: #d42244;
+		}
+	</style>
+</head>
+<body>
+		<nav class="row menu effect-2">
+                    <div class="col">
+                        <ul>
+                            <li>
+                                <a href="{{url_for('upload_0')}}">
+                                    <span data-hover="Inicio">Inicio</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{url_for('upload4')}}">
+                                    <span data-hover="Ver rectores">Ver rectores</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{url_for('upload3')}}">
+                                    <span data-hover="Ver candidatos">Ver candidatos</span>
+                                </a>
+                            </li>
+                            <li>
+                                 <a href="{{url_for('upload2')}}">
+                                    <span data-hover="Ver estadísticas">Ver estadísticas</span>
+                                 </a>
+                            </li>
+                            <li>
+                                 <a href="{{url_for('upload0')}}">
+                                    <span data-hover="Emular Gestion">Emular Gestion</span>
+                                 </a>
+                            </li>
+                        </ul>
+                    </div>
+     </nav> 
+     
+      <h1>TABLA DE RECTORES A NIVEL NACIONAL</h1>
+      <h4><a href="{{url_for('upload2')}}">Ver Estadisticas de la tabla</a></h4> 
+	<table class="tabla">
+        <tr>
+            <th>Nombre</th>
+            <th>Universidad</th>
+            <th>Antedecentes de corrupcion</th>
+            <th>Profesion</th>
+            <th>Produccion cientifica</th>
+            <th>Proyectos de investigacion</th>
+            <th>Experiencia administrativa</th>
+            <th>Genero</th>
+            <th>¿Ex rector?</th>
+            <th>Nivel de Gestion</th>
+        </tr>
+        {% for candidato in mycandidato %}
+        <tr>
+            <td>{{candidato.NOMBRE}}</td>
+            <td>{{candidato.UNIVERSIDAD}}</td>
+            <td>{{candidato.ANTECEDENTES_CORRUPCION}}</td>
+            <td>{{candidato.PROFESION}}</td>
+            <td>{{candidato.PRODUCCION_CIENTIFICA}}</td>
+            <td>{{candidato.PROYECTOS_INVESTIGACION}}</td>
+            <td>{{candidato.ANOS_EXPERIENCIA}}</td>
+            <td>{{candidato.GENERO}}</td>
+            <td>{{candidato.EX_RECTOR}}</td>
+            <td>{{candidato.GESTION}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

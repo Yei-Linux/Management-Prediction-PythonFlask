@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos2.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>Document</title>
+
+</head>
+
+<style>
+ /*---MENU---*/
+
+.menu{
+
+    background: #161616;
+    padding: 4px;
+}
+
+.menu ul{
+    list-style: none;
+    text-align: center;
+}
+
+.menu ul li{
+    display: inline-block;
+    font-style: none;
+}
+
+.menu ul li a{
+    color: #f2f2f2;
+    font-size: 12px;
+    border-bottom: 0px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.menu li + li:before{
+    content: " | ";
+    padding: 0 10px;
+    color: #fff;
+}
+
+.header-container .title{
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    width: 70%;
+}
+
+.title h1{
+    margin: 10px;
+
+}
+
+.title p{
+
+    padding: auto 40px;
+}
+
+.title .btn{
+    background: #2772d6;
+    color: #fff;
+    border: none;
+}
+
+.title .btn:hover{
+    background: #277df7;
+}
+
+.effect-2 a span{
+	position: relative
+}
+
+.effect-2 a span{
+	display: inline-block
+}
+
+.effect-2 a {
+	line-height: 24px;
+	perspective: 1000px
+}
+
+.effect-2 a span {
+	padding: 0 14px;
+	transition: transform .5s;
+	transform-origin: 50% 0;
+	transform-style: preserve-3d
+}
+
+.effect-2 a span::before {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #277df7;
+	content: attr(data-hover);
+	transition: background 1s;
+	transform: rotateX(-90deg);
+	transform-origin: 50% 0
+}
+
+.effect-2 a:focus span, .effect-2 a:hover span {
+	transform: rotateX(90deg) translateY(-22px)
+}
+
+.effect-2 a:focus span::before, .effect-2 a:hover span::before {
+    background: #277df7;
+    color:#fff;
+}
+
+
+
+/*-------CARD-------*//*-------CARD-------*//*-------CARD-------*//*-------CARD-------*//*-------CARD-------*/
+@import url('https://fonts.googleapis.com/css?family=Krub:400,700');
+
+body{
+    padding-bottom:  20px;
+    background: #161616;
+}
+
+.estudio{
+    display: block;
+    text-align: center;
+    width: 60%;
+    margin: 40px auto 10px auto;
+    color: #ccc;
+
+}
+
+.card {
+    display: block;
+    margin: 100px auto;
+  position: absolute;
+border: 5px double #424242;
+  top: 100;
+  right: 0;
+
+  left: 0;
+  width: 630px;
+  height: 900px !important;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2);
+  background: #151515;
+  padding-botton: 100px;
+
+}
+.card .ds-top {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 300px;
+  height: 80px;
+  background: #3f4a4e;
+  animation: dsTop 1.5s;
+}
+.card .avatar-holder {
+  position: absolute;
+  margin: auto;
+  top: 40px;
+  right: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #151515, inset 0 0 0 5px #000, inset 0 0 0 5px #000, inset 0 0 0 5px #000, inset 0 0 0 5px #000;
+  background: white;
+  overflow: hidden;
+  animation: mvTop 1.5s;
+}
+.card .avatar-holder img {
+  width: 100%;
+  height: 100%
+  object-fit: cover;
+}
+.card .name {
+  display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: 140px auto 4px auto;
+  width: inherit;
+
+    flex-direction: column;
+    flex-wrap: nowrap;
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+}
+.card .name h4{
+  color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+font-size: 16px;
+  width: 80%;
+    margin: 20px auto 0 auto;
+}
+.card .name a:hover {
+  text-decoration: underline;
+  color: 1da1f2;
+}
+.card .name h6 {
+
+  color: white;
+     letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1da1f2;
+    font-size: 13px;
+  width: 80%;
+    margin: 20px auto;
+}
+.card .button {
+
+  margin: auto;
+  padding: 8px;
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+  outline: none;
+}
+.card .button a {
+  padding: 4px 10px;
+  border-radius: 10px;
+  color: white;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 1s;
+}
+.card .button a:hover {
+  color: white;
+  background: #424242;
+}
+.card .ds-info {
+
+  margin: auto;
+  top: 120px;
+  bottom: 0;
+  right: 0;
+    font-size: 18px;
+  left: 0;
+  width: inherit;
+
+  display: flex;
+}
+
+
+
+.card .ds-info .pens, .card .ds-info .projects, .card .ds-info .posts {
+  position: relative;
+  left: -600px;
+  width: calc(600px / 3);
+  text-align: center;
+  color: #b57e3e;
+  animation: fadeInMove 2s;
+  animation-fill-mode: forwards;
+}
+.card .ds-info .pens h6, .card .ds-info .projects h6, .card .ds-info .posts h6 {
+  height: 20px;
+  letter-spacing: 0.7px;
+  color: #f2f2f2;
+}
+
+.ds h6{
+    font-size: 16px !important;
+    font-weight: 400 !important;
+
+}
+
+.card .ds-info .pens i, .card .ds-info .projects i, .card .ds-info .posts i {
+  font-size: 18px;
+    display: block;
+    height: 20px;
+    margin: 4px auto;
+  letter-spacing: 0.7px;
+  color: #f2f2f2;
+}
+
+.card .ds-info .pens p, .card .ds-info .projects p, .card .ds-info .posts p {
+  font-size: 16px !important;
+    text-transform: uppercase;
+}
+.card .ds-info .ds:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+.card .ds-info .ds:nth-of-type(1) {
+  animation-delay: 1s;
+}
+.card .ds-skill {
+ border-top: 1px solid #535353;
+  margin: 20px auto 10px auto;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  width: 300px;
+  height: 100px;
+  animation: mvBottom 1.5s;
+}
+.card .ds-skill h6 {
+  margin: 30px auto 20px auto;
+    text-align: center;
+  font-weight: 700;
+    font-size: 18px;
+  text-transform: uppercase;
+  color: #ed7d31;
+}
+
+.html{
+    margin-bottom: 20px;
+}
+
+.card .ds-skill .skill h6 {
+  font-weight: 400;
+  font-size: 8px;
+    font-size: 12px;
+  letter-spacing: 0.05em;
+  margin: 4px 0;
+  color: white;
+}
+.card .ds-skill .skill .fab {
+  color: #ed7d31;
+  font-size: 14px;
+}
+.card .ds-skill .skill .bar {
+  height: 14px;
+    margin-bottom: 4px;
+  background: #ed7d31;
+  text-align: right;
+}
+.card .ds-skill .skill .bar p {
+  color: #f2f2f2;
+  font-size: 10px;
+   letter-spacing: 0.2px;
+  margin-bottom:  -10px;
+  animation: fadeIn 5s;
+}
+.card .ds-skill .skill .bar:hover {
+
+}
+.card .ds-skill .skill .bar-html {
+  width: {{pred2}}%;
+  animation: htmlSkill 1s;
+  animation-delay: 0.4s;
+}
+.card .ds-skill .skill .bar-css {
+  width: {{pred}}%;
+  animation: cssSkill 2s;
+  animation-delay: 0.4s;
+}
+.card .ds-skill .skill .bar-js {
+  width: {{conf}}%;
+  animation: jsSkill 3s;
+  animation-delay: 0.4s;
+  margin-botton: 40px;
+}
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    left: -400px;
+  }
+  100% {
+    opacity: 1;
+    left: 10px;  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes htmlSkill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 95%;
+  }
+}
+@keyframes cssSkill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes jsSkill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+@keyframes mvBottom {
+  0% {
+    bottom: -150px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+@keyframes mvTop {
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: 40px;
+  }
+}
+@keyframes dsTop {
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: 0;
+  }
+}
+.following {
+  color: white;
+  background: crimson;
+}
+
+.dinero{
+    color: #3b8427 !important;
+
+}
+
+.ciencia{
+    color : #05aff4 !important;
+}
+
+.investigar{
+    color: #ccc !important;
+}
+
+.educacion{
+    color: #30578f !important;
+}
+
+.administracion{
+    color: #e0453a !important;
+}
+
+.economia{
+    color: #3b8427 !important;
+
+}
+
+.universidad{
+    color: #ccc;
+    font-size: 14px;
+}
+	
+	.ds pens h6{
+		font-size: 100px
+		
+	}
+
+
+</style>
+<body>
+
+<nav class="row menu effect-2">
+                    <div class="col">
+                        <ul>
+                            <li>
+                                <a href="{{url_for('upload_0')}}">
+                                    <span data-hover="Inicio">Inicio</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{url_for('upload4')}}">
+                                    <span data-hover="Ver rectores">Ver rectores</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{url_for('upload3')}}">
+                                    <span data-hover="Ver candidatos">Ver candidatos</span>
+                                </a>
+                            </li>
+                            <li>
+                                 <a href="{{url_for('upload2')}}">
+                                    <span data-hover="Ver estadísticas">Ver estadísticas</span>
+                                 </a>
+                            </li>
+                            <li>
+                                 <a href="{{url_for('upload0')}}">
+                                    <span data-hover="Emular Gestion">Emular Gestion</span>
+                                 </a>
+                            </li>
+                        </ul>
+                    </div>
+     </nav>
+
+
+
+ <div class="card">
+  <div class="ds-top"></div>
+  <div class="avatar-holder">
+    <img src="https://png.pngtree.com/svg/20170602/person_1058425.png" alt="Albert Einstein">
+  </div>
+  <div class="name">
+    <h4 href="https://codepen.io/AlbertFeynman/" target="_blank">{{nombre}}</h4>
+    <h6 title="Followers"><i class=" universidad fas fa-university"></i> <span class="followers">{{universidad}}</span></h6>
+
+  </div>
+  <div class="button">
+    <a href="#" class="btn" onmousedown="follow();">{{profesion}}</a>
+  </div>
+  <div class="ds-info">
+    <div class="ds pens">
+      <h6 title="Number of pens created by the user">Antedecedentes de corrupción <i class=" dinero fas fa-money-bill"></i></i></h6>
+      <p>{{ante}}</p>
+    </div>
+    <div class="ds projects">
+      <h6 title="Number of projects created by the user">Produccion cientifica <i class=" ciencia fas fa-atom"></i></h6>
+      <p>{{prod}}</p>
+    </div>
+    <div class="ds posts">
+      <h6 title="Number of posts">Proyectos de investigacion <i class=" investigar fas fa-search"></i></h6>
+      <p>{{proy}}</p>
+    </div>
+  </div>
+
+  <div class="estudio">
+      Estudios relacionados a la:
+  </div>
+
+  <div class="ds-info">
+    <div class="ds pens">
+      <h6 title="Number of pens created by the user">Personalidad<i class=" educacion fas fa-graduation-cap"></i></h6>
+      <p>{{econ}}</p>
+    </div>
+    <div class="ds projects">
+      <h6 title="Number of projects created by the user">Gestion Publica<i class=" administracion fas fa-layer-group"></i></h6>
+      <p>{{adm}}</p>
+    </div>
+    <div class="ds posts">
+      <h6 title="Number of posts">Años de experiencia<i class=" economia fas fa-dollar-sign"></i></h6>
+      <p>{{edu}}</p>
+    </div>
+  </div>
+
+
+  <div class="ds-skill">
+    <h6>Prediccion de Gestion </h6>
+    <div class="skill html">
+      <h6> Gestion </h6>
+      <div class="bar bar-html">
+        <p>{{pred2}}%</p>
+      </div>
+    </div>
+
+    <div class="skill javascript">
+      <h6>Nivel de confianza </h6>
+      <div class="bar bar-js">
+        <p>{{conf}}%</p>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+ <script src="index.js"></script>
+</html>

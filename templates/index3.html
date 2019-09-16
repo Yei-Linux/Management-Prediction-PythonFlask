@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{{url_for('static',filename='estilos.css') }}">
+	<title>Document</title>
+	<style>
+		
+		 table{
+            width:50%;
+            margin:auto;
+        }
+		.registrarTitulo{
+			text-align: center;
+			margin: auto;
+			color: white;
+			margin: 20px;
+		}
+
+		.registrarFormulario{
+			display: flex;
+			justify-content: space-around;
+			flex-direction: column;
+		}
+		.td2{
+			width: 400px;
+		}
+		.registrar .input{
+			width: 100%;
+			padding: 10px 5px;
+			background: #2f2f2f;
+			color: #f2f2f2;
+			border: 1px solid #7f7f7f;
+			border-radius: 5px;
+		}
+
+		.registrar .input:hover{
+
+			border: 1px solid #fff;
+		}
+
+		.registrar .input::placeholder{
+			color: #f2f2f2;
+		}
+
+		.registrar .iniciarBoton{
+
+			width: 100px;
+			margin: 20px auto;
+			padding: 13px;
+			text-align: center;
+			background: #000500;
+			border-radius: 8px;
+			border: 1px solid #727171;
+			color: #f2f2f2;
+
+		}
+
+		.registrar .iniciarBoton:hover{
+			cursor: pointer;
+			color: #f2f2f2;
+			border: 1px solid #f2f2f2;
+			transition: .2s;
+		}
+		.inputez{
+			visibility: hidden;
+		}
+	</style>
+</head>
+<body>
+		<nav class="row menu effect-2">
+                    <div class="col">
+                        <ul>
+                            <li>
+                                <a href="{{url_for('upload_0')}}">
+                                    <span data-hover="Inicio">Inicio</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{url_for('upload4')}}">
+                                    <span data-hover="Ver rectores">Ver rectores</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{url_for('upload3')}}">
+                                    <span data-hover="Ver candidatos">Ver candidatos</span>
+                                </a>
+                            </li>
+                            <li>
+                                 <a href="{{url_for('upload2')}}">
+                                    <span data-hover="Ver estadísticas">Ver estadísticas</span>
+                                 </a>
+                            </li>
+                            <li>
+                                 <a href="{{url_for('upload0')}}">
+                                    <span data-hover="Emular Gestion">Emular Gestion</span>
+                                 </a>
+                            </li>
+                        </ul>
+                    </div>
+     </nav> 
+     
+     
+    
+    	
+     <section class="registrar">
+           <h2 class="registrarTitulo" >Mostrar Candidato</h2>
+
+                <form class="registrarFormulario" action="{{url_for('upload5')}}" method="post">
+                   
+                   	<table>
+                   		<tr>
+                   			<td class="td1"><label for="">Universidad: </label></td>
+                   			<td class="td2">
+                   			<select  name="cantidad" class="input"  id="Lista">
+                   				
+                   				{% for univ in myuniv %}
+      
+									<option value="{{univ.ID_UNIVERSIDAD}}" name="id_univ">{{univ.NOM_UNIVERSIDAD}}</option>
+						
+								{% endfor %}
+                   		
+                    		</select>
+                    		</td>
+                   			<td><input onclick="Click_on()" class="iniciarBoton" type="submit" value="Mostrar"></td>
+                   		</tr>
+                   	</table>
+                   	
+                   	<input class="inputez" type="text" value="" id="homero" name="homer">
+                    
+                </form>
+       </section>
+       
+       <script>
+			function Click_on(){
+				var homero=document.getElementById("Lista").value;
+
+				document.getElementById("homero").value=homero;
+				
+        	}
+		</script>
+</body>
+</html>
