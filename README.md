@@ -28,7 +28,8 @@ This template show the info about the project:
 ![alt tag](https://github.com/Yei-Linux/Management-Prediction-PythonFlask/blob/master/imgs/Home2.PNG)
 ![alt tag](https://github.com/Yei-Linux/Management-Prediction-PythonFlask/blob/master/imgs/Home3.PNG)
 
-4)LIST OF RECTORS IN OUR BBDD:
+LIST OF RECTORS IN OUR BBDD:
+----------------------------
 This template show all rectors of the bbdd:
 
 ![alt tag](https://github.com/Yei-Linux/Management-Prediction-PythonFlask/blob/master/imgs/ShowRectors1.PNG)
@@ -68,4 +69,6 @@ This is the main template when we can input our data and depending of this we ar
 	<img src="https://github.com/Yei-Linux/Management-Prediction-PythonFlask/blob/master/imgs/Emulate4.PNG">
 </p>
 
-Note:This project is so interesting,so this project will continue updated
+FINALLY..:
+----------
+This project is so interesting,so this project will continue updated.
