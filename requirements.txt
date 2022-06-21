@@ -1,7 +1,7 @@
 pandas==0.25.0
 Flask_SQLAlchemy==2.3.2
 SQLAlchemy==1.1.15
-numpy==1.16.4
+numpy==1.22.0
 matplotlib==3.0.0
 Flask==0.12.2
 scikit_learn==0.21.3
